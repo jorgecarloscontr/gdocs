@@ -8,8 +8,13 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                 <p>Informacion del sistema</p>
-                 <p>Gestor de documentos</p>
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
                 </div>
             </div>
         </div>

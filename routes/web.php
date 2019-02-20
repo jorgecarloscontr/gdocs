@@ -14,10 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/info',function(){
-    return view('paginas.informacion');
-    //return "Hola informacion del sistema";
-});
-Route::get('/contacto',function(){
-    return view('paginas.contacto');
-});
+Route::get('/info','PaginaController@info');
+Route::get('/bienvenida/{nombre}/{apellido?}', 'PaginaController@bienvenida');
+Route::get('/contacto','PaginaController@contacto');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
