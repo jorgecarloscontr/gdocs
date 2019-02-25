@@ -20,4 +20,7 @@ class PaginaController extends Controller
             'nombre_completo' => $nombre.' '.$apellido
         ]);
     }
+    public function colaboradores(){
+        return view('paginas.colaboradores');
+    }
 }
